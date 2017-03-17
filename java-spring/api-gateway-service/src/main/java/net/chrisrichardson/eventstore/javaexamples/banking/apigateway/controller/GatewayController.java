@@ -44,8 +44,8 @@ public class GatewayController {
 
   @PostConstruct
   public void init() {
+    logger.info("apiGatewayProperties:" + apiGatewayProperties);
     PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
-
     httpClient = HttpClients.custom()
             .setConnectionManager(cm)
             .build();
